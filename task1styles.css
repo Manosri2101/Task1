@@ -1,0 +1,215 @@
+	body {
+		display: flex;
+		transition: margin-left 0.5s;
+	}
+	.sidebar {
+		height: 100%;
+		width: 250px;
+	    position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #3153A4;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 2px;
+	}
+
+	.sidebar a {
+		padding: 12px 15px;
+		text-decoration: none;
+		font-size: 15px;
+		color: white;
+		display: flex;
+		transition: 0.3s;
+	}
+	.sidebar p{
+		padding: 8px 15px;
+		margin-bottom:0px;
+		font-size: 15px;
+		color: white;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidebar a:hover {
+		color: #f1f1f1;
+		background-color:#364361;
+	}
+	.sidebar.collapsed {
+		width: 40px;
+	}
+	.sidebar.collapsed a span, .sidebar.collapsed p, .sidebar.collapsed button span {
+           display: none;
+    }
+	.main {
+		margin-left: 250px;
+		padding: 1px;
+		background-color:white;
+		transition: margin-left 0.3s;
+	}
+	.main p{
+		padding: 1px;;
+		font-size: 15px;
+	    color: black;
+		margin:0px;
+	}
+	.purchase{
+		margin-left:10px; 
+		margin-right:20px;
+		margin-top:10px;
+		margin-bottom:10px;
+		text-align:center;
+		border-width:2px;
+		border-color:white;
+		border-style:ridge;
+		border-radius:5px;
+	}
+	.sidebar.collapsed + .main {
+		margin-left: 40px;
+	}
+	hr {
+        height: 2px;
+        background-color: grey;
+        border: none;
+    }
+	.sol{
+		margin-bottom:250px;
+	}
+	.openbtn {
+		padding:10px 15px;
+		width:100%;
+		font-size: 15px;
+		cursor: pointer;
+		background-color: #3153A4;
+		color: white;
+		border: none;
+		text-align:left;
+	}
+	.openbtn:hover{
+		color: #f1f1f1;
+		background-color:#364361;
+	}
+	input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .sidebar {
+        width: 60px;
+    }
+    input[type="checkbox"]:checked ~ .sidebar a span,
+    input[type="checkbox"]:checked ~ .sidebar p,
+    input[type="checkbox"]:checked ~ .sidebar label span {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .main {
+         margin-left: 60px;
+    }
+    .grid-container {
+		display: grid;
+		grid-gap:10px;
+		grid-template-rows: 0.75fr 2fr 1.5fr 1.5fr ;
+		grid-template-columns: 0.5fr 1fr 0.5fr ;
+	    background-image: linear-gradient(#D1BADC, #F7F5F8);
+		padding: 10px;
+    }
+	.grid-item {
+		padding: 20px;
+    } 
+	.item1{
+		grid-row:1/span 4;
+		grid-column:1;
+		color:black;
+		text-align: center;
+		font-size:20px;
+	}
+	.item2{
+		grid-row:1;
+		grid-column:2;
+	}
+	.item3{
+		grid-row:1;
+		grid-column:3;
+	}
+	.item4{
+		grid-row:2;
+		grid-column:2;
+		border-style:solid;
+		border-width:1px;
+		border-color:grey;
+		border-radius:20px;
+		background-color:white;
+	}
+	.sidebar .nav-item i {
+		margin-right: 12px;
+	}
+	.container{
+		display:flex;
+		flex-direction:row;
+		justify-content:space-evenly;
+		align-items:center;
+	}
+	.button{
+		background-color:blue;
+		color:white;
+		text-align:center;
+		padding:8px;
+		border:none;
+		border-radius:5px;
+	}
+	.item5{
+		padding-right:100px;
+		grid-row:2/span 4;
+		grid-column:3;
+	}
+	.item6{
+		grid-row:3;
+		grid-column:2;
+		border-style:solid;
+		border-width:1px;
+		border-color:grey;
+		border-radius:20px;
+		background-color:white;
+	}
+	.item7{
+		grid-row:4;
+		grid-column:2;
+		border-style:solid;
+		border-width:1px;
+		border-color:grey;
+		border-radius:20px;
+		background-color:white;
+	}
+	.container1{
+        display: flex;
+        gap: 20px;
+    }
+    .inverted-pentagon {
+        width: 100px;
+        height: 120px;
+        position: relative;
+        clip-path: polygon(50% 0%, 110% 60%, 111% 110%, 0% 110%, 0% 48%);
+        background: #F1EEF2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(180deg);
+    }
+	.inverted-pentagon p{
+		transform:rotate(180deg);
+		text-align:center;
+		padding-bottom:50px;	
+	}
+    .hexagon {
+        width: 30px;
+        height: 90px;
+        clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+		transform: rotate(90deg);
+		background-color:pink;
+		position:fixed;
+    }
+	.hexagon p{
+		text-align:center;
+		transform: rotate(90deg);
+		padding-left:30px;
+		padding-bottom:3px;
+	}
